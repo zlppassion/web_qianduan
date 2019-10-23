@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#wrap{
+				width: 300px;
+				border:1px solid;
+				margin: 0 auto;
+			}
+			#left{
+				width: 80px;
+				height: 80px;
+				background: url(img/1.png)no-repeat;
+				/*把猫的头往右上扯*/
+				background-position: -20px -20px;
+				float: left;
+				
+			}
+			#des{
+				/*开启BFC,只要overflow不为visible，就可以开启BFC*/
+				/*margin-left: 60px;*/
+				/*此处选用padding-left,因为左边浮动了，
+				 * 选用margin-left的话，会进去，因为浮动提升了半层。
+				 */
+				padding-left: 30px;
+				
+				/*这三条一起使用时，就是在文字溢出时，显示省略号,且必须是块级元素时，由于这里已经
+				 是块元素了，就不必写display:block了，如果不是，就要写*/
+				white-space: nowrap;
+				text-overflow: ellipsis;/*文本溢出时显示省略号*/
+				overflow: hidden;
+				/*display: inline-block;*/
+				
+				/*background: pink;*/
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="left"></div>
+		<div id="des">
+			小猫咪买一送一啦 小猫咪买一送一啦 <br />
+			小猫咪买一送一啦 小猫咪买一送一啦 <br />
+			小猫咪买一送一啦 小猫咪买一送一啦 <br />
+			小猫咪买一送一啦 小猫咪买一送一啦 <br />
+			小猫咪买一送一啦 小猫咪买一送一啦 <br />
+			小猫咪买一送一啦 小猫咪买一送一啦 <br />
+			小猫咪买一送一啦 小猫咪买一送一啦 <br />
+			小猫咪买一送一啦 小猫咪买一送一啦 <br />
+		</div>
+		</div>
+	</body>
+</html>

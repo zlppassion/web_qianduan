@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding: 0;
+			}
+			#wrap{
+				height: 400px;
+				width: 400px;
+				margin: 0 auto;
+				border: 1px solid;
+				/*图片相当于是inline-block的元素,text-align是行内元素居中*/
+				text-align: center;
+				
+			}
+			#wrap:after{
+				content: "";
+				display: inline-block;/*只有用inline-block才可以按行展开*/
+				height: 100%;
+				/*width: 2px;*/
+				width:0px;
+				background: pink;
+				vertical-align: middle;
+			}
+			#wrap img{
+				vertical-align: middle;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<img src="img/1.png" width="100"/>
+		</div>
+	</body>
+</html>

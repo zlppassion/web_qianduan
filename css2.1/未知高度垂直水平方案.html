@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--未知高度的元素水平垂直居中方案
+			
+			
+		-->
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#wrap{
+				position: relative;
+				width: 400px;
+				height: 600px;
+				background: pink;
+				margin: 0 auto;
+			}
+			#inner{
+				/*一定要设position为absolute,这样高宽尺寸由内容撑开*/
+				position: absolute;
+				left:50%;
+				top: 50%;
+				/*下面这个函数的三个参数是相对于自身，x,y,z轴方向的偏移
+				 但transform的兼容性不是很好*/
+			    transform: translate3d(-50%,-50%,0);
+				background: deeppink;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="inner">
+				rest <br />
+				rest <br />
+				rest <br />
+				rest <br />
+				rest <br />
+				rest <br />
+				rest <br />
+			</div>
+		</div>
+	</body>
+</html>
